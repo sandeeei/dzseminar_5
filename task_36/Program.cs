@@ -14,7 +14,7 @@ int[] GetBinaryArray(int size)
     for (int i = 0; i < size; i++)
     {
 
-        array[i] = new Random().Next(100);
+        array[i] = new Random().Next(-100,100);
 
     }
     return array;
