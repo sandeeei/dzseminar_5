@@ -21,11 +21,23 @@ int[] GetBinaryArray(int size)
 Console.WriteLine("Введиде размер массива: ");
 int[] resultArray = GetBinaryArray(Convert.ToInt32(Console.ReadLine()));
 Console.WriteLine($"Массив: [ {String.Join("; ", resultArray)} ]");
-
+//Задаем размер нового массива в котором будет результат .
 int size = resultArray.Length;
 int result = 1;
+int newsize=0;
+if(size%2==0)
+{
+    newsize=size/2;
+}
+else
+{
+    newsize=(size/2+1);
+}
 
-int[] NewArray=new int[size];
+// произведение пар чисел в одномерном массиве. 
+// Парой считаем первый и последний элемент, второй и предпоследний и т.д. 
+// Запись результата в новый массив
+int[] NewArray=new int[newsize];
 
 for (int i = 0; i < size; i++)
 {
